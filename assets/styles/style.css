@@ -1,0 +1,131 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0f1215; /* Fundo escuro profundo */
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Header / Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: rgba(15, 18, 21, 0.8);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #a0a0a0;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #ff5f5f; /* Cor de destaque similar ao modelo */
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid #ffffff;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: #0f1215;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    /* Substitua a URL abaixo pela sua imagem de fundo de rede/cybersecurity */
+    background: linear-gradient(to right, rgba(15, 23, 30, 0.9), rgba(15, 23, 30, 0.2)), 
+                url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2070');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: #cccccc;
+    margin-bottom: 35px;
+    max-width: 500px;
+}
+
+.btn-primary {
+    background-color: #ff5f5f; /* Coral/Vermelho do modelo original */
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #e54e4e;
+    transform: translateY(-2px);
+}
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+    .nav-links, .btn-outline {
+        display: none; /* Simplificação para mobile */
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
